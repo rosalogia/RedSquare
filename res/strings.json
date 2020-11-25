@@ -1,0 +1,70 @@
+{
+    "description":
+    {
+        "en": "RedSquare is a discord moderation bot for leftist communities where features are implemented as requested. The objective is to be as simple as possible for community leaders in leftist spaces, and to respond immediately to their needs in whichever way is most convenient for them specifically. RedSquare is written and maintained by Ambika Eshwar. If you are part of a leftist community using RedSquare, or are a leftist community who wants to use Red Square, please reach out to her at ambika.eshwar@rutgers.edu. If you have a feature request and know how to use GitHub, feel free to open an issue on [GitHub](https://github.com/rosalogia/redsquare). Otherwise, you may email your request to the aforementioned address. If you are a programmer and want to help develop RedSquare, feel free to check the issues page on RedSquare's GitHub and inquire about how you can get started on resolving an existing issue. If you would like to help translate RedSquare into your language, please email the aforementioned address, your help will be much appreciated.",
+        "es": "RedSquare es un bot de moderación de discord para comunidades de izquierda donde las funciones se implementan según lo solicitado. El objetivo es ser lo más sencillo posible para los líderes comunitarios en espacios de izquierda, y responder de manera inmediata a sus necesidades de la forma que más les convenga específicamente. RedSquare está escrito y mantenido por Ambika Eshwar. Si eres parte de una comunidad de izquierda que usa RedSquare, o eres una comunidad de izquierda que quiere usar la Plaza Roja, comunícate con ella en ambika.eshwar@rutgers.edu. Si tiene una solicitud de función y sabe cómo usar GitHub, no dude en abrir un problema en https://github.com/rosalogia/redsquare. De lo contrario, puede enviar su solicitud por correo electrónico a la dirección antes mencionada. Si es un programador y desea ayudar a desarrollar RedSquare, no dude en consultar la página de problemas en GitHub de RedSquare y preguntar cómo puede comenzar a resolver un problema existente. Si desea ayudar a traducir RedSquare a su idioma, envíe un correo electrónico a la dirección antes mencionada, su ayuda será muy apreciada."
+    },
+    "verificationMessage":
+    {
+        "en": "The discord server you joined requires that you verify some information about yourself both for your comfort and safety as well as the comfort and safety of its members. If you feel uncomfortable disclosing any of this information, don't hesitate to contact an administrator in the server you joined to explain your discomfort and ask how to continue.\n\nPlease provide the following information in your response to this message:\n\n- Your age, or whether or not you're a minor\n- Your pronouns\n- A social media profile we can check to verify your intent\n\nWe understand that for various reasons, answering one or more of these questions can be difficult. If that's the case, please don't hesitate to reach out. Your cooperation is appreciated!"
+    },
+    "verificationReport":
+    {
+        "en": "Profile for "
+    },
+    "configurationHelp":
+    {
+        "en": "You have triggered the configure command without specifying a feature to configure. Here is a list of commands you have enabled for your server\n\n%s\n\nHere is a list of commands you may choose to enable for your server, by using the command `@RedSquare configure feature_name_goes_here enable`\n\n%s\n\nUsing the configure command without specifying an option to configure, e.g. `@RedSquare configure verification`, will show you all the various ways in which you can configure the specified feature."
+    },
+    "verificationConfiguration":
+    {
+        "en": "You can configure the verification feature for your server by specifying the channel where user profiles are displayed for moderators and administrators to review and approve of them. Make sure that this channel is private and only viewable by your fellow administrators. You can set this channel using the following command:\n`@RedSquare configure verification channel #my-channel-name`\n\nYou may also configure the message that users are DMed by RedSquare when they first join your server. The default message is as follows:\n\n> The discord server you joined requires that you verify some information about yourself both for your comfort and safety as well as the comfort and safety of its members. If you feel uncomfortable disclosing any of this information, don't hesitate to contact an administrator in the server you joined to explain your discomfort and ask how to continue.\n> \n> Please provide the following information in your response to this message:\n> \n> - Your age, or whether or not you're a minor\n> - Your pronouns\n> - A social media profile we can check to verify your intent\n> \n> We understand that for various reasons, answering one or more of these questions can be difficult. If that's the case, please don't hesitate to reach out. Your cooperation is appreciated!\n\nHowever, you can change it to ask for as much or as little as you would like. You can do this with the following command:\n`@RedSquare configure verification message \"your verification message should go here\"`"
+    },
+    "featureEnabled":
+    {
+        "en": "Feature **%s** enabled"
+    },
+    "featureDisabled":
+    {
+        "en": "Feature **%s** disabled"
+    },
+    "featureAlreadyEnabled":
+    {
+        "en": "Feature **%s** already enabled"
+    },
+    "featureAlreadyDisabled":
+    {
+        "en": "Feature **%s** already disabled"
+    },
+    "verificationMessageSet":
+    {
+        "en": "New verification message has been set. When new members join the discord, they'll receive the message you just set in a DM and will be asked to respond to it. Their response will be sent to the user-profiles channel that you have designated. If you have not designated such a channel yet, you can do so with the following command:\n`@RedSquare configure verification channel #my-channel-name`"
+    },
+    "verificationChannelSet":
+    {
+        "en": "New user-profiles channel has been set. Now when new members join the discord and respond to the verification message they receive, their response will be sent to %s where you can review their profile and decide whether you want to let them in to your server, as well as assign them roles according to their profile. If you would like to customise the verification message that new members receive upon joining your server, you may do so using the following command:\n`@RedSquare configure verification message \"your message goes here, between quotes\"`"
+    },
+    "invalidChannel":
+    {
+        "en": "Invalid channel, please try running the command again"
+    },
+    "help":
+    {
+        "en": "Help",
+        "es": "Ayuda"
+    },
+    "features":
+    {
+        "en": "Features",
+        "es": "Rasgos"
+    },
+    "usage":
+    {
+        "en": "Usage",
+        "es": "Cómo utilizar"
+    },
+    "usageHelp":
+    {
+        "en": "Use the help command to learn more about how you can make use of RedSquare by specifying the name of a feature when using it, e.g.\n`@RedSquare help verification`\n\n The available features are listed below."
+    }
+}

@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "RedSquare"
+version = "0.1.0"
+description = "A Discord moderation bot for Leftist communities. Features are implemented as requested."
+authors = ["Ambika Eshwar <ambika.eshwar@rutgers.edu>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+"discord.py" = "*"
+parse = "^1.18.0"
+
+[tool.poetry.dev-dependencies]
+pyre-check = "*"
+black = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
