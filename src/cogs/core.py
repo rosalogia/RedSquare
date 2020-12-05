@@ -15,28 +15,31 @@ class Core(commands.Cog):
         """Prints message to terminal when bot is ready"""
         print(f"Logged on as {self.bot.user}")
 
+
     def prepare_feature_strings(self, guild_config: Dict[str, Any]) -> Tuple[str, str]:
+        guild_lang = guild_config["language"]
+        
         guild_features = guild_config["features"]
-        feature_string = "- " + "\n- ".join(guild_features) if guild_features else "You currently have no features enabled."
+        feature_string = "- " + "\n- ".join(guild_features) if guild_features else get_string("noFeatures", guild_lang)
 
         feature_name    = lambda n: n.split(".")[0]
         feature_filter  = lambda n: n.endswith(".py") and feature_name(n) not in guild_features and feature_name(n) != "core"
 
-        available_features = list(map(feature_name, filter(feature_filter, os.listdir("src/cogs/"))))
+        available_features = [feature_name(feature) for feature in os.listdir("src/cogs/") if feature_filter(feature)]
 
-        available_feature_string = "- " + "\n- ".join(available_features) if available_features else "You have all currently existing features enabled."
+        available_feature_string = "- " + "\n- ".join(available_features) if available_features else get_string("allFeatures", guild_lang)
 
         return (feature_string, available_feature_string)
 
     @commands.command()
     async def configure(self, ctx: commands.Context, feature: str=None, option: str=None, *args) -> None:
-        if not ctx.author.guild_permissions.manage_guild:
-            await ctx.send("You do not have sufficient permissions to use this command.")
-            return
-
         guild_configurations = fetch_res("local/guild_configurations")
         guild_config = guild_configurations[str(ctx.guild.id)]
         guild_lang = guild_config["language"]
+        
+        if not ctx.author.guild_permissions.manage_guild:
+            await ctx.send(get_string("permissions", guild_lang))
+            return
         
         if feature is None:
             await ctx.send(get_string("configurationHelp", guild_lang) % self.prepare_feature_strings(guild_config))
@@ -74,7 +77,7 @@ class Core(commands.Cog):
         feature_filter  = lambda n: n.endswith(".py") and feature_name(n) != "core"
 
         features = list(map(feature_name, filter(feature_filter, os.listdir("src/cogs/"))))
-        feature_string = "- " + "\n- ".join(features) if features else "You have all currently existing features enabled."
+        feature_string = "- " + "\n- ".join(features) if features else get_string("allFeatures", guild_lang)
 
         embed.add_field(name=get_string("features", guild_lang), value=feature_string, inline=False)
 

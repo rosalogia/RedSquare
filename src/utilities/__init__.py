@@ -60,7 +60,8 @@ def get_config() -> Dict[str, Any]:
 
 def feature_users(feature: str) -> List[int]:
     return    [ int(guild)
-                for guild, config in fetch_res("local/guild_configurations").items()
+                for guild, config
+                in fetch_res("local/guild_configurations").items()
                 if feature in config["features"] ]
 
 def update_config(updated_cfg: Dict[str, Any]) -> None:

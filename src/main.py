@@ -25,7 +25,7 @@ intents.guilds  = True
 bot: discord.Client = commands.Bot(command_prefix=commands.when_mentioned, intents=intents, help_command=None)
 
 # This file will be referenced in other cogs, so make sure it's created here!
-create_ine("res/guild_configurations.json")
+create_ine("res/local/guild_configurations.json")
 
 @bot.event
 async def on_guild_join(guild: discord.Guild) -> None:
